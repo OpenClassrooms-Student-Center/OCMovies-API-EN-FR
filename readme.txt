@@ -29,7 +29,3 @@ messageBienvenue et objectif sont des variables qui se trouvent dans le fichier 
 La valeur se trouvant dans les doubles accolades sera convertie en html par Flask. On peut évidemment modifier son style en pointant la balise dans laquelle elle se trouve.
 
 Ici il y a 2 variables, mais vous pouvez mettre autant de variables que vous voulez dans les paramètres de render_template, et les utiliser dans le template (ici index.html). Vous pouvez évidemment les nommer comme vous le voulez, tant qu'ils respectent la convention de nommage de Python.
-
-Attention :
-- Ne modifier pas l'emplacement des fichiers html, css et serveur.py
-- Dans le fichier serveur.py, ne pas modifier le code des lignes 1 à 5, 17 et 18, 21 et 22.
