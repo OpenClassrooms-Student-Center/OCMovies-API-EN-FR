@@ -5,8 +5,8 @@ Le dossier du projet est organisé de cette manière :
 - requestsAPI.py > Un fichier que vous pouvez utiliser pour requêter l'API
 - templates :
     - index.html > Le fichier HTML du projet. Il est dans le dossier template (la vue du modèle MCV) comme Flask le demande
-    - static :
-        - style.css > Le fichier CSS du projet. Il est dans le dossier static comme Flask le demande
+- static :
+    - style.css > Le fichier CSS du projet. Il est dans le dossier static comme Flask le demande
         
 Pour lancer le projet vous devez installer : 
 - Python (la version 3)
