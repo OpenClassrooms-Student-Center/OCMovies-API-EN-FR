@@ -1,4 +1,21 @@
-Bienvenue dans le README du projet JustStreamIt !
+# Bienvenue dans le README du projet JustStreamIt !
+
+JustStreamIt est un projet pédagogique ayant pour objectif de fournir une base
+solide mais simple pour le back-end d'un projet d'étude. Ce back-end est
+réalisé avec le langage Python et le micro-framework web Flask.
+
+<img src="docs/assets/img/logo.png" width="300" alt="JustStreamIt logo">
+
+## Dépendances de l'application et installation
+Comme recommandé dans la [documentation sur le packaging de Python](https://packaging.python.org/tutorials/managing-dependencies/), 
+ce projet utilise le module pipenv pour gérer ses dépendances ainsi que la 
+création et de l'environnement virtuel. Si vous n'utiliser pas encore pipenv,
+vous pouvez l'installer en suivant les recommandations d'installation [décrite
+ici](docs/pipenv/installation.md).
+
+Les dépendances de l'application sont fournie dans un fichier Pipfile joint
+au dépôt de code du projet. Une fois pipenv installé, vous voulez les installer
+avec une commande unique identique sur tous les systèmes d'exploitation.
 
 Le dossier du projet est organisé de cette manière :
 - serveur.py > Le fichier permettant de lancer le serveur avec Flask

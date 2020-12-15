@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+<!-- The title of the page -->
+{% block title %}{{ title }} | {{ page_name }}{% endblock %}
+
+<!-- The content of body -->
+{% block content %}
+  <h1>Bonjour cher(e) {{ visitor_name }}</h1>
+  <p>{{ message}}</p>
+{% endblock %}

@@ -1,0 +1,2 @@
+FLASK_APP=juststreamit
+FLASK_ENV=development
