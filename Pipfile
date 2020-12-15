@@ -8,5 +8,6 @@ verify_ssl = true
 [packages]
 flask = "*"
 python-dotenv = "*"
+requests = "*"
 
 [requires]
