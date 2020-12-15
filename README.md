@@ -4,7 +4,7 @@ JustStreamIt est un projet pédagogique ayant pour objectif de fournir une base
 solide mais simple pour le back-end d'un projet d'étude. Ce back-end est
 réalisé avec le langage Python et le micro-framework web Flask.
 
-<img src="docs/assets/img/logo.png" width="300" alt="JustStreamIt logo">
+<img src="docs/assets/img/logo.png" width="300" alt="JustStreamIt logo" style="margin-right: auto;margin-left: auto;">
 
 ## Dépendances de l'application et installation
 Comme recommandé dans la [documentation sur le packaging de Python](https://packaging.python.org/tutorials/managing-dependencies/), 
