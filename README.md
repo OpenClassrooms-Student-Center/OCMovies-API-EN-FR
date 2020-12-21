@@ -1,10 +1,10 @@
 # OCMovies-API: Test API providing movie information
 
 The OCMovies-API project is a REST API application to be executed locally in the context
-of educational projects. It provides movies information from GET http endpoints.
-The API provides endpoints to get detailed infomation about movies filtered by
-various criteria such as genre, IMDB score or year. Endpoints allow to retrieve
-info for individual movies or lists of movies.
+of educational projects. It provides movie information from GET http endpoints.
+The API provides these endpoints to get detailed infomation about movies filtered by
+various criteria such as genre, IMDB score or year. Endpoints allow users to retrieve
+information for individual movies or lists of movies.
 
 ## Installation
 
@@ -12,7 +12,7 @@ This locally-executable API can be installed and executed from [http://localhost
 
 ### Option 1: Installation and execution with pipenv
 
-The requirement for this method is to have either pipenv already installed on your python installation. If pipenv is not already installed on your computer, refer to [this page](docs/pipenv/installation-en.md).
+For this method, it is necessary to have pipenv already installed on your python installation. If pipenv is not already installed on your computer, refer to [this page](docs/pipenv/installation-en.md).
 
 1. Clone this repository using `$ git clone https://github.com/pythonmentor/ocmovies-api.git` (you can also download the code using [as a zip file](https://github.com/pythonmentor/ocmovies-api/archive/master.zip))
 2. Move to the ocmovies-api root folder with `$ cd ocmovies-api-en`
@@ -33,25 +33,25 @@ of the API, you only have to execute step 5 from the root folder of the project.
 3. Create a virtual environment for the project with `$ py -m venv env` on windows or `$ python3 -m venv env` on macos or linux.
 4. Activate the virtual environment with `$ env\Scripts\activate` on windows or `$ source env/bin/activate` on macos or linux.
 5. Install project dependencies with `$ pip install -r requirements.txt`
-6. Create and populate project database with `$ python manage.py create_db`
+6. Create and populate the project database with `$ python manage.py create_db`
 7. Run the server with `$ python manage.py runserver`
 
 When the server is running after step 7 of the procedure, the OCMovies API can be requested from endpoints starting with the following base URL: http://localhost:8000/api/v1/titles/.
 
-Steps 1-6 are only required for initial installation. For subsequent launches of the API, you only have to execute steps 4 and 7 from the root folder of the project.
+Steps 1-3 and 5-6 are only required for initial installation. For subsequent launches of the API, you only have to execute steps 4 and 7 from the root folder of the project.
 
 ## Usage and detailed endpoint documentation
 
-One you have launched the server, the can read the documentation through the
+One you have launched the server, you can read the documentation through the
 browseable documentation interface of the API by visiting [http://localhost:8000/api/v1/titles/](http://localhost:8000/api/v1/titles/).
 
 The API provides the following endpoints. All these endpoints are read-only and exclusively support HTTP requests using the **GET method**:
 
 - Search and filter movies: [http://localhost:8000/api/v1/titles/](http://localhost:8000/api/v1/titles/). The filters available are:
 
-   - `year=<year>`, `min_year=<year>` or `max_year=<year>` to get movies movies 
+   - `year=<year>`, `min_year=<year>` or `max_year=<year>` to get movies 
    filterd by year. The first does an exact match of the year.
-   - `imdb_score_min=<score>` and `imdb_score_max<score>` to get movies with only 
+   - `imdb_score_min=<score>` and `imdb_score_max<score>` to get movies with only a 
    given imdb score.
    - `title=<title>` or `title_contains=<string>` to get movies matching 
    the searched string. The first performs an exact match while the second
@@ -59,40 +59,40 @@ The API provides the following endpoints. All these endpoints are read-only and 
    is independent of character case.
    - `director=<director-name>` or `director_contains=<string>` to get movies
    whose directors correspond to the searched string. The first performs an exact match 
-   with director name while the second searches director names containing the 
+   with the director name while the second searches director names containing the 
    search term. The search is independent of character case.
    - `writer=<name>` or `writer_contains=<string>` to get movies
    whose writers contain to the searched string. The first performs an exact match 
-   with writer name while the second searches writer names containing the 
+   with the writer name while the second searches writer names containing the 
    search term. The search is independent of character case.
    - `actor=<name>` or `actor_contains=<string>` to get movies
    whose actors correspond to the searched string. The first performs an exact match 
-   with actor name while the second searches actor names containing the 
+   with the actor name while the second searches actor names containing the 
    search term. The search is independent of character case.
    - `genre=<name>` or `genre_contains=<string>` to get movies
    whose genres correspond to the searched string. The first performs an exact match 
-   with genre name while the second searches genre names containing the 
+   with the genre name while the second searches genre names containing the 
    search term. The search is independent of character case.
    - `country=<name>` or `country_contains=<string>` to get movies
    whose countries correspond to the searched string. The first performs an exact match 
-   with country name while the second searches country names containing the 
+   with the country name while the second searches country names containing the 
    search term. The search is independant of character case.
    - `lang=<name>` or `lang_contains=<string>` to get movies
    whose languages corresponds to the searched string. The first performs an exact match 
-   with language name while the second searches language names containing the 
+   with the language name while the second searches language names containing the 
    search term. The search is independent of character case.
    - `company=<name>` or `company_contains=<string>` to get movies
    whose company corresponds to the searched string. The first performs an exact match 
-   with company name while the second searches company names containing the 
+   with the company name while the second searches company names containing the 
    search term. The search is independent of character case.
    - `rating=<name>` or `rating_contains=<string>` to get movies
    whose rating corresponds to the searched string. The first performs an exact match 
-   with company name while the second searches company names containing the 
+   with the rating name while the second searches rating names containing the 
    search term. The search is independent of character case.
-   - `sort_by=<field>` to get movies sorted by a particular order. For example,
+   - `sort_by=<field>` to sort movies in a particular order. For example,
    use `sort_by=title` to order the movies alphabetically by title and 
-   `sort_by=-title` to order the movies in the reversed direction. You can also
-   sort by multiple criteria by separating the criteria using commas as in `sort_by=-year,title` that filters the movie with the most recent ones first.
+   `sort_by=-title` to order the movies in the reverse direction. You can also
+   sort with multiple criteria by separating the criteria using commas as in `sort_by=-year,title` that filters the movie with the most recent ones first.
    Then, within a same year, movies are filtered alphabetically according to
    their title.
 
