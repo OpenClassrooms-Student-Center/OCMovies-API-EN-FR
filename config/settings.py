@@ -135,9 +135,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r'^https?://localhost(?::\d+)?$',
-    r'^https?://127\.0\.0\.1(?::\d+)?$',
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 FIXTURE_DIRS = [str(BASE_DIR / 'data')]
