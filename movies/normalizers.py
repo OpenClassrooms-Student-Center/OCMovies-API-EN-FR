@@ -104,7 +104,7 @@ def transform_incomes_and_reviews_to_int_or_none(movie):
 
 def transform_missing_rating_to_explicit_notice(movie):
     value = movie.pop('rated', '').strip()
-    movie['rated'] = value or 'Not rated or unkown rating'
+    movie['rated'] = value or 'Not rated or unknown rating'
 
 
 def transform_missing_image_to_none(movie):

@@ -226,7 +226,7 @@ class TestNormalizers:
         'value, result',
         [
             ('abc', 'abc'),
-            ('', 'Not rated or unkown rating'),
+            ('', 'Not rated or unknown rating'),
         ],
     )
     def test_transform_missing_rating_to_explicit_notice_works_correctly(
