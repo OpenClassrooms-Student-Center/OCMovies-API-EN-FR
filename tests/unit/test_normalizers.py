@@ -87,14 +87,14 @@ class TestNormalizers:
             'actors',
         ],
     )
-    def test_transform_missing_fields_to_unkown_converts_empty_strings(
+    def test_transform_missing_fields_to_unknown_converts_empty_strings(
         self, field
     ):
         """Verifies than given a call to function
-        transform_missing_fields_to_unkown, when if received a dictionnary
+        transform_missing_fields_to_unknown, when if received a dictionnary
         entry with an empty string value, then value is set to 'Unknown'."""
         dic = {field: ''}
-        norm.transform_missing_fields_to_unkown(dic)
+        norm.transform_missing_fields_to_unknown(dic)
         assert dic.get(field) == 'Unknown'
 
     @pytest.mark.parametrize(
@@ -109,14 +109,14 @@ class TestNormalizers:
             'actors',
         ],
     )
-    def test_transform_missing_fields_to_unkown_keeps_non_empty_strings(
+    def test_transform_missing_fields_to_unknown_keeps_non_empty_strings(
         self, field
     ):
         """Verifies than given a call to function
-        transform_missing_fields_to_unkown, when if received a dictionnary
+        transform_missing_fields_to_unknown, when if received a dictionnary
         entry with an empty string value, then value is set to 'Unknown'."""
         dic = {field: 'aBc'}
-        norm.transform_missing_fields_to_unkown(dic)
+        norm.transform_missing_fields_to_unknown(dic)
         assert dic.get(field) == 'aBc'
 
     def test_transform_missing_long_description_no_description_notice(self):

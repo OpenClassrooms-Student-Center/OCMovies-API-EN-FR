@@ -33,14 +33,14 @@ def transfrom_duration_into_integer(movie):
     movie['duration'] = int(movie['duration'])
 
 
-def _transform_missing_item_to_unkown(movie, key):
+def _transform_missing_item_to_unknown(movie, key):
     value = movie.get(key)
     movie[key] = (
         value if isinstance(value, str) and value.strip() else 'Unknown'
     )
 
 
-def transform_missing_fields_to_unkown(movie):
+def transform_missing_fields_to_unknown(movie):
     for key in (
         'countries',
         'genres',
@@ -50,7 +50,7 @@ def transform_missing_fields_to_unkown(movie):
         'production_company',
         'actors',
     ):
-        _transform_missing_item_to_unkown(movie, key)
+        _transform_missing_item_to_unknown(movie, key)
 
 
 def transform_missing_long_description_no_description_notice(movie):
@@ -120,7 +120,7 @@ class MovieNormalizer:
         transform_year_to_int,
         transform_date_published_to_python_date,
         transfrom_duration_into_integer,
-        transform_missing_fields_to_unkown,
+        transform_missing_fields_to_unknown,
         transform_missing_long_description_no_description_notice,
         transform_avg_vote_to_decimal,
         transform_imdb_score_to_decimal,
