@@ -9,6 +9,7 @@ pytest-django = "*"
 pytest-mock = "*"
 pytest-cov = "*"
 pytest-factoryboy = "*"
+typing-extensions = "*"
 
 [packages]
 django = "*"
