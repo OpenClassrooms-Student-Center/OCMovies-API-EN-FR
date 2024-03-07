@@ -41,8 +41,8 @@ Une fois que vous avez lancé le serveur, vous pouvez lire la documentation depu
 
 - Demander des informations détaillées sur un film dont on connait l'identifiant: [http://localhost:8000/api/v1/titles/499549](http://localhost:8000/api/v1/titles/499549) où 499549 est l'identifiant (`id`) du film "Avatar".
 - Rechercher les genres disponibles: [http://localhost:8000/api/v1/genres/](http://localhost:8000/api/v1/genres/). Les filtres disponibles sont:
-   - `name_contains=<search string>` pour n'afficher que les genres dont la nom contient la chaîne de caractère recherchée.
-   - `movie_title_contains=<search string>` pour rechercher les genres associés à un film dont le titre contient la chaîne de caractère recherchée.
+   - `name_contains=<search string>` pour n'afficher que les genres dont la nom contient la chaîne de caractères recherchée.
+   - `movie_title_contains=<search string>` pour rechercher les genres associés à un film dont le titre contient la chaîne de caractères recherchée.
 
 # OCMovies-API: Test API providing movie information
 
